@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { User } from '../user-class/user';
+import { UserRequestService } from '../user-http/user-request.service';
 
 @Component({
   selector: 'app-user',
@@ -10,20 +10,10 @@ import { User } from '../user-class/user';
 export class UserComponent implements OnInit {
   user: User;
 
-  constructor(private http: HttpClient) {}
+  constructor(private userService: UserRequestService) {}
 
   ngOnInit() {
-    interface ApiResponse {
-      avatar_url: string;
-      login: string;
-      repos_url: string;
-    }
-    this.http
-      .get<ApiResponse>(
-        'https://api.github.com/users/daneden?access_token=ec49c45418f454964473ce0359be455f2ef83590'
-      )
-      .subscribe((data) => {
-        this.user = new User(data.avatar_url, data.login, data.repos_url);
-      });
+    this.userService.getUsers();
+    this.user = this.userService.user;
   }
 }
