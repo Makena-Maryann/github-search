@@ -1,5 +1,9 @@
 <div class="container">
-  <form (ngSubmit)="searchUser()" #userForm="ngForm" class="form-inline mt-5">
+  <form
+    (ngSubmit)="searchUser()"
+    #userForm="ngForm"
+    class="form-inline mt-5 mb-5"
+  >
     <input
       type="text"
       class="form-control mr-2"
@@ -11,7 +15,7 @@
       required
     />
 
-    <button type="submit" class="btn btn-primary">
+    <button type="submit" class="btn btn-danger">
       Search
     </button>
   </form>
