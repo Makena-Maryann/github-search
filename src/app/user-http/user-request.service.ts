@@ -34,8 +34,9 @@ export class UserRequestService {
             resolve();
           },
           (error) => {
-            this.user.profilePhoto = '';
-            this.user.userName = 'Makena-Maryann';
+            this.user.profilePhoto =
+              'https://cdn.pixabay.com/photo/2013/07/12/13/16/alert-146730_960_720.png';
+            this.user.userName = 'Oooops! User Not Found!';
             this.user.userRepos = '';
 
             reject(error);

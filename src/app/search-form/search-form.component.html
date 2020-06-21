@@ -1,19 +1,16 @@
-<form
-  (ngSubmit)="searchUser()"
-  #userForm="ngForm"
-  class="form-inline mx-auto"
-  style="width: 280px;"
->
-  <input
-    type="text"
-    class="form-control mb-5"
-    id="name"
-    [(ngModel)]="gitHubUserName"
-    name="name"
-    #name="ngModel"
-    placeholder="GitHub Username"
-    required
-  />
+<div class="container">
+  <form (ngSubmit)="searchUser()" #userForm="ngForm" class="form-inline mt-5">
+    <input
+      type="text"
+      class="form-control mr-2"
+      id="name"
+      [(ngModel)]="gitHubUserName"
+      name="name"
+      #name="ngModel"
+      placeholder="GitHub Username"
+      required
+    />
 
-  <button type="submit" class="btn btn-primary">Search</button>
-</form>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
