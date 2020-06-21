@@ -13,7 +13,7 @@ export class UserRequestService {
     this.user = new User('', '', '');
   }
 
-  getUsers() {
+  getUsers(username) {
     interface ApiResponse {
       avatar_url: string;
       login: string;
@@ -22,7 +22,7 @@ export class UserRequestService {
     let promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          `https://api.github.com/users/daneden?access_token=${environment.apiKey}`
+          `https://api.github.com/users/${username}?access_token=${environment.apiKey}`
         )
         .toPromise()
         .then(
