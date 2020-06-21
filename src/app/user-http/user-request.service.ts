@@ -13,7 +13,7 @@ export class UserRequestService {
     this.user = new User('', '', '');
   }
 
-  getUsers(username) {
+  getUsers(username: string) {
     interface ApiResponse {
       avatar_url: string;
       login: string;
