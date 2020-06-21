@@ -16,13 +16,14 @@ export class UserComponent implements OnInit {
     interface ApiResponse {
       avatar_url: string;
       login: string;
+      repos_url: string;
     }
     this.http
       .get<ApiResponse>(
-        'https://api.github.com/users/maryann?access_token=ec49c45418f454964473ce0359be455f2ef83590'
+        'https://api.github.com/users/daneden?access_token=ec49c45418f454964473ce0359be455f2ef83590'
       )
       .subscribe((data) => {
-        this.user = new User(data.avatar_url, data.login);
+        this.user = new User(data.avatar_url, data.login, data.repos_url);
       });
   }
 }
