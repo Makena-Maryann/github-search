@@ -1,3 +1,7 @@
 export class User {
-  constructor(public profilePhoto, public userName, public userRepos) {}
+  constructor(
+    public profilePhoto: string,
+    public userName: string,
+    public userRepos: []
+  ) {}
 }
