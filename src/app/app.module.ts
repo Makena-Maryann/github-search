@@ -9,8 +9,9 @@ import { UserComponent } from './user/user.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 
 import { UserRequestService } from './user-http/user-request.service';
+import { RepositoriesComponent } from './repositories/repositories.component';
 @NgModule({
-  declarations: [AppComponent, UserComponent, SearchFormComponent],
+  declarations: [AppComponent, UserComponent, SearchFormComponent, RepositoriesComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [UserRequestService],
   bootstrap: [AppComponent],
