@@ -1,35 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserRequestService } from '../user-http/user-request.service';
-import { Repositories } from '../repo-class/repositories';
 import { environment } from '../../environments/environment';
+import { Repositories } from '../repo-class/repositories';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RepoRequestService {
   repo: Repositories;
-  repoUrl: string;
+  gitUrl = `https://api.github.com/users`;
 
-  constructor(
-    private userRequestService: UserRequestService,
-    private http: HttpClient
-  ) {
+  constructor(private http: HttpClient) {
     this.repo = new Repositories('', '', '');
   }
 
-  getRepos() {
-    let repoUrl = this.userRequestService.user.userRepos;
-
-    interface GitApiResponse {
+  getRepos(gitUser: string) {
+    interface ApiResponse {
       name: string;
       description: string;
       html_url: string;
     }
-
-    let repoPromise = new Promise((resolve, reject) => {
+    let promise = new Promise((resolve, reject) => {
       this.http
-        .get<GitApiResponse>(`${repoUrl}`)
+        .get<ApiResponse>(
+          `${this.gitUrl}/${gitUser}/repos?access_token=${environment.apiKey}`
+        )
         .toPromise()
         .then(
           (response) => {
@@ -41,14 +36,12 @@ export class RepoRequestService {
             resolve();
           },
           (error) => {
-            this.repo.description = '';
-            this.repo.name = 'No Repo Found';
-            this.repo.url = '';
+            this.repo.name = 'Oooops! No repo was found!';
 
             reject(error);
           }
         );
     });
-    return repoPromise;
+    return promise;
   }
 }
