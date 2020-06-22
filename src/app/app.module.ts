@@ -7,13 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 import { UserRequestService } from './user-http/user-request.service';
-import { RepositoriesComponent } from './repositories/repositories.component';
+import { RepoRequestService } from './repo-http/repo-request.service';
+
 @NgModule({
-  declarations: [AppComponent, UserComponent, SearchFormComponent, RepositoriesComponent],
+  declarations: [
+    AppComponent,
+    UserComponent,
+    SearchFormComponent,
+    RepositoriesComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [UserRequestService],
+  providers: [UserRequestService, RepoRequestService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
