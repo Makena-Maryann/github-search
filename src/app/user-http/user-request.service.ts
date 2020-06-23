@@ -32,6 +32,8 @@ export class UserRequestService {
             this.user.userName = response.login;
             this.user.userRepos = response.repos_url;
 
+            console.log(response);
+
             resolve();
           },
           (error) => {
