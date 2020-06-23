@@ -1,12 +1,12 @@
 # GithubApi
 
-#### This is an angular application where the user can post a quote and upvote or downvote other people's quotes.
+#### This is an Angular app that uses GitHub API to enable users to search for a GitHub user profile information and their repositories.
 
 #### By **Maryann Makena**
 
 ## Description
 
-This is an angular application where the user can post a quote and upvote or downvote other people's quotes. The user can also delete a quote.
+This is an Angular app that uses GitHub API to enable users to search for a GitHub user profile information and their repositories.
 
 ## Setup/Installation Requirements
 
@@ -28,7 +28,7 @@ In case of any issues send me an email at maryann.makena00@gmail.com. Feel free 
 
 ## Link to live version
 
-https://makena-maryann.github.io/Quotes/
+https://makena-maryann.github.io/github-search/
 
 ### License
 
