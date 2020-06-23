@@ -2,11 +2,11 @@
   <form
     (ngSubmit)="searchUser()"
     #userForm="ngForm"
-    class="form-inline mt-5 mb-5"
+    class="form-inline my-2 my-lg-0"
   >
     <input
-      type="text"
-      class="form-control mr-2"
+      type="search"
+      class="form-control mr-sm-2"
       id="name"
       [(ngModel)]="gitHubUserName"
       name="name"
@@ -15,7 +15,7 @@
       required
     />
 
-    <button type="submit" class="btn btn-danger">
+    <button type="submit" class="btn btn-dark my-2 my-sm-0">
       Search
     </button>
   </form>

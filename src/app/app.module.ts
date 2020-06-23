@@ -12,6 +12,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { UserRequestService } from './user-http/user-request.service';
 import { RepoRequestService } from './repo-http/repo-request.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     SearchFormComponent,
     RepositoriesComponent,
     NavbarComponent,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [UserRequestService, RepoRequestService],
