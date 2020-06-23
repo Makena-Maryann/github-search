@@ -14,7 +14,7 @@ This is an Angular app that uses GitHub API to enable users to search for a GitH
 
 ## Known Bugs
 
-No bugs.
+Display of Repos depends on a click event which is not user-friendly. Working on auto-generating.
 
 ## Technologies Used
 
