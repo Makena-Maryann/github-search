@@ -12,7 +12,7 @@ export class SearchFormComponent implements OnInit {
 
   searchUser() {
     this.userNameService.getUsers(this.gitHubUserName);
-    this.repoService.getRepos(this.gitHubUserName);
+    /*this.repoService.getRepos(this.gitHubUserName);*/
   }
 
   constructor(

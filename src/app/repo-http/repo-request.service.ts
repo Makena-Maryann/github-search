@@ -10,9 +10,9 @@ export class RepoRequestService {
   gitUrl = `https://api.github.com/users`;
   constructor(private http: HttpClient) {}
 
-  getRepos(gitUser) {
+  /* getRepos(gitUser) {
     return this.http
       .get(`${this.gitUrl}/${gitUser}repos?access_token=${environment.apiKey}`)
       .pipe(map((res) => res));
-  }
+  }*/
 }

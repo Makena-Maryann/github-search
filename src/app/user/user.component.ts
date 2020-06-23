@@ -10,15 +10,21 @@ import { UserRequestService } from '../user-http/user-request.service';
 })
 export class UserComponent implements OnInit {
   user: User;
-
+  repos: String[];
   /* searchRepo() {
     this.repoService.getRepos();
   }*/
 
   constructor(
-    private userService: UserRequestService
-  ) /*private repoService: RepoRequestService*/
-  {}
+    private userService: UserRequestService /*private repoService: RepoRequestService*/
+  ) {}
+
+  getRepoData() {
+    this.userService.getRepos().subscribe((data) => {
+      console.log(data);
+      this.repos = data;
+    });
+  }
 
   ngOnInit() {
     this.userService.getUsers;

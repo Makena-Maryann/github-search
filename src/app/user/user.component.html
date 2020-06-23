@@ -14,10 +14,13 @@
             {{ user.userName }}
           </p>
         </div>
+        <button (click)="getRepoData()" class="btn btn-danger">
+          View Repos
+        </button>
       </div>
     </div>
     <div class="col-md-6">
-      <app-repositories></app-repositories>
+      <app-repositories [repos]="repos"></app-repositories>
     </div>
   </div>
 </div>

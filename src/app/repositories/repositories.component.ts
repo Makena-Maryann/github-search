@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Repositories } from '../repo-class/repositories';
-import { RepoRequestService } from '../repo-http/repo-request.service';
-import { UserRequestService } from '../user-http/user-request.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-repositories',
@@ -9,18 +6,9 @@ import { UserRequestService } from '../user-http/user-request.service';
   styleUrls: ['./repositories.component.css'],
 })
 export class RepositoriesComponent implements OnInit {
-  repos: any;
-  gitUser;
+  @Input() repos: String[];
 
-  constructor(
-    private repoService: RepoRequestService,
-    private userService: UserRequestService
-  ) {
-    this.repoService.getRepos(this.gitUser).subscribe((repos) => {
-      console.log(repos);
-      this.repos = repos;
-    });
-  }
+  constructor() {}
 
   ngOnInit() {}
 }

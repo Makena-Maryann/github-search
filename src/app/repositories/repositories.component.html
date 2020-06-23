@@ -1,6 +1,19 @@
-<h3>Repos</h3>
+<ul *ngFor="let repo of repos">
+  <li>{{ repo.name }}</li>
+  <li>{{ repo.language }}</li>
+  <li>{{ repo.description }}</li>
+  <a [href]="repo.html_url" class="card-link btn btn-danger" target="_blank">
+    View in Github
+  </a>
+</ul>
 
-<div class="card" *ngFor="let repo of repos">
-  <p>{{ repo.name }}</p>
-  <p>{{ repo.description }}</p>
-</div>
+<!--<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ repo.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ repo.language }}</h6>
+    <p class="card-text">{{ repo.description }}</p>
+    <a [href]="repo.html_url" class="card-link btn btn-danger"
+      >View in Github</a
+    >
+  </div>
+</div>-->
