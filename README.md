@@ -1,27 +1,43 @@
 # GithubApi
 
+#### This is an angular application where the user can post a quote and upvote or downvote other people's quotes.
+
+#### By **Maryann Makena**
+
+## Description
+
+This is an angular application where the user can post a quote and upvote or downvote other people's quotes. The user can also delete a quote.
+
+## Setup/Installation Requirements
+
+- This application requires a browser and internet connection.
+
+## Known Bugs
+
+No bugs.
+
+## Technologies Used
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+Typescript
+Bootstrap
 
-## Development server
+## Support and contact details
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In case of any issues send me an email at maryann.makena00@gmail.com. Feel free to contribute to the code.
 
-## Code scaffolding
+## Link to live version
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://makena-maryann.github.io/Quotes/
 
-## Build
+### License
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+MIT License
 
-## Running unit tests
+Copyright (c) 2020 Makena-Maryann
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-## Running end-to-end tests
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
